@@ -2,7 +2,6 @@ import {
 	IsDateString,
 	IsEmail,
 	IsNotEmpty,
-	IsPhoneNumber,
 	IsString,
 	Length,
 	MinLength
@@ -25,8 +24,8 @@ export class ClientDto {
 	@ApiProperty({ type: String, description: 'gender' })
 	readonly gender: string
 
-	@IsPhoneNumber()
 	@IsNotEmpty()
+	@Length(10, 15, { message: 'Phone must be between 10-15 characters' })
 	@ApiProperty({ type: String, description: 'phone' })
 	readonly phone: number
 
