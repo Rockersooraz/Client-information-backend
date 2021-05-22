@@ -11,7 +11,8 @@ export class ClientDetailsService {
 		return {
 			client: client.slice(0, query + 1),
 			limit: query,
-			page: Math.ceil(client.length / query)
+			page: Math.ceil(client.length / query),
+			totalRecords: client.length
 		}
 	}
 
