@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  nestjs-app:
+    container_name: nestjs_api_dev
+    image: 84272/dockerized-nest-app:1.0.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: npm run start:debug
+    ports:
+      - 4000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
