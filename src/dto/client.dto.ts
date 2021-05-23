@@ -15,6 +15,7 @@ export class ClientDto {
 	readonly id: string
 
 	@IsString()
+	@IsNotEmpty()
 	@Length(3, 25, { message: 'Name must be between 3-25 characters' })
 	@ApiProperty({ type: String, description: 'name' })
 	readonly name: string
@@ -37,6 +38,7 @@ export class ClientDto {
 
 	@IsString()
 	@Length(5, 35, { message: 'Address must be between 5-35 characters' })
+	@IsNotEmpty()
 	@ApiProperty({ type: String, description: 'address' })
 	readonly address: string
 
