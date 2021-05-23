@@ -3,7 +3,7 @@
 This is an application written in  Typescript Nest framework.This app comprises the rest api for the CRUD operation of the clients with proper validation.
 
 
-## Features and use of Library(npm only)
+## Features
 
 1. Csv-Parser
 2. Validation
@@ -42,12 +42,6 @@ $ npm install
 ```bash
 # development
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Stay in touch
